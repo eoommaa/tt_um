@@ -21,13 +21,13 @@ module tt_um_eoommaa_prbs31 (
         lfsr <= 31'd1; // Reset counter
     end else begin
         // Increment counter on each clock cycle
-        lfsr[0] <= lfsr[27] ^ lfsr[30] ;
-        lfsr[30:1] <= lfsr[29:0] ;  
+        lfsr[0] <= lfsr[27] ^ lfsr[30];
+        lfsr[30:1] <= lfsr[29:0];  
     end
 end
 
   // All output pins must be assigned. If not used, assign to 0.
-  assign uo_out[0]  = lfsr[30];
+  assign uo_out[0] = lfsr[30];
   assign uio_out = 0;
   assign uio_oe  = 0;
   assign uo_out[7:1] = 7'd0;
