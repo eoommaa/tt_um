@@ -63,4 +63,4 @@ async def test_project(dut):
     	await ClockCycles(dut.clk, 1)
     # The following assertion is just an example of how to check the output values.
     # Test (assert) that we are getting the expected output.
-    	assert dut.uo_out[0].value == out[i]
+    	assert dut.uo_out.value[0] == out[i]
