@@ -20,8 +20,8 @@ out=[1]*(n_clock)
 # Run through the simulation to create the idealized output
 for i in range(n_clock):
   # Input the feedback
-  PRBSN[0]=PRBSO[27]^PRBSO[30]
-  # shift the vlaues
+  PRBSN[0]=PRBSO[29]^PRBSO[30]
+  # Shift the vlaues
   for j in range(prbs_size-1):
     count=prbs_size-j-1
     PRBSN[count]=PRBSO[count-1]
